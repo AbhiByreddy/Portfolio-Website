@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  background-color: black;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+  .gradient:hover {
+    background-image: linear-gradient(to bottom right, #0044ff, #f40cc2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+
+
