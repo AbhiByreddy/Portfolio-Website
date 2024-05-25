@@ -1,30 +1,64 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import ProjectNavBar from "../components/ProjectNavBar";
+import ExperienceNavBar from "../components/ExperienceNavBar";
 import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import Experience from "../components/Experience";
+import { useEffect, useRef } from 'react';
+
+
+
 
 export default function Home() {
+
+  const observer = useRef(null);
+
+  useEffect(() => {
+    observer.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => {
+      observer.current.observe(element);
+    });
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <div>
-      <div id="section1" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <section id="section1" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <div className="max-w-4xl mx-auto mb-10 text-white">
           <NavBar />
           <Hero />
         </div>
-      </div>
+      </section>
 
-      <div id="section2" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <section id="section2" className="hidden"  style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <div className="max-w-4xl mx-auto mb-10 text-white">
+          <ProjectNavBar/>
         <ProjectCard />
         </div>
-      </div>
+      </section>
 
-      <div id="section3" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-        <div className="max-w-4xl mx-auto mb-10 text-white">
+      <section id="section3" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <div className="max-w-4xl mb-10 text-white">
+          <ExperienceNavBar/>
         <Experience/>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
