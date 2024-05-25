@@ -4,7 +4,7 @@ export default function ProjectCard() {
   const card = {
     title: "Discord Compiler",
     description: "A Discord bot made to compile code snippets in various different languages", 
-    link: "Project Link",
+    link: "https://github.com/AbhiByreddy/Discord-Compiler",
     image: "./compile.jpg",
     technologies: ["JavaScript", "REST"],
   };
@@ -13,7 +13,7 @@ export default function ProjectCard() {
     title: "WebbProcessor",
     description:
       "A program made to automatically process and output images taken from the JWST Space Telescope.",
-    link: "Project Link",
+    link: "https://github.com/AbhiByreddy/WebbProcessor",
     image: "./JWSTicon.png",
     technologies: ["Java", "Bit Manipulation"],
   };
@@ -22,7 +22,7 @@ export default function ProjectCard() {
     title: "QuickQuiz",
     description:
       "A program made to automatically process and output images taken from the JWST Space Telescope.",
-    link: "Project Link",
+    link: "https://github.com/Laphatize/QuickQuiz",
     image: "https://images.pexels.com/photos/1526/dark-blur-blurred-gradient.jpg",
     technologies: ["AWS", "Tensorflow", "GPT-3", "Firebase", "HTML/TailwindCSS",]
   };
@@ -31,7 +31,7 @@ export default function ProjectCard() {
     title: "Workbook",
     description:
       "Terminal system that allows for professors to write markdown/HTML and have a linux container on the side for students to execute the code.",
-    link: "Project Link",
+    link: "https://github.com/Laphatize/workbook",
     image: "/workbook1.png",
     technologies: ["Google Kubernetes Engine", "React", "HTML/TailwindCSS"]
   };
@@ -42,7 +42,7 @@ export default function ProjectCard() {
   return (
     <div className="logos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
       {projects && projects.map((project, index) => (
-        <div key={index} className="card  hover:scale-105 hover:backdrop-blur transition-all duration-300">
+        <div key={index} className="  hover:scale-105 hover:backdrop-blur transition-all duration-300">
           <img
             src={project.image}
             alt={project.title}
