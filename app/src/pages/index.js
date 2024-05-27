@@ -38,8 +38,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <section id="section1" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+    <div >
+      <section id="section1" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", marginBottom: "200px"}}>
         <div className="max-w-4xl mx-auto mb-10 text-white">
           <NavBar />
           <Hero />
@@ -49,14 +49,14 @@ export default function Home() {
       <section id="section2" className="hidden"  style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <div className="max-w-4xl mx-auto mb-10 text-white">
           <ProjectNavBar/>
-        <ProjectCard />
+          <ProjectCard />
         </div>
       </section>
 
-      <section id="section3" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-        <div className="max-w-4xl mb-10 text-white">
+      <section id="section3" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", marginTop: "600px"}}>
+        <div className="max-w-4xl mb-10 mx-auto text-white">
           <ExperienceNavBar/>
-        <Experience/>
+          <Experience/>
         </div>
       </section>
     </div>

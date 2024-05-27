@@ -16,10 +16,8 @@ return (
             </ScrollLink>
         </button>
 
-        <button className="px-4 gradient">
-            <ScrollLink to="section4" smooth={true} duration={1000} className="cursor-pointer">
+        <button className="px-4 gradient" onClick={() => window.open('./Resume.pdf')}>
                 Resume
-            </ScrollLink>
         </button>
 
     </div>

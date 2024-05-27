@@ -3,9 +3,9 @@ import React from "react";
 export default function ProjectCard() {
   const card = {
     title: "Discord Compiler",
-    description: "A Discord bot made to compile code snippets in various different languages", 
+    description: "A Discord bot made to compile code snippets in various different languages such as Java, Javascript, Python and GO", 
     link: "https://github.com/AbhiByreddy/Discord-Compiler",
-    image: "./compile.jpg",
+    image: "./compile.png",
     technologies: ["JavaScript", "REST"],
   };
 
@@ -23,7 +23,7 @@ export default function ProjectCard() {
     description:
       "A program made to automatically process and output images taken from the JWST Space Telescope.",
     link: "https://github.com/Laphatize/QuickQuiz",
-    image: "https://images.pexels.com/photos/1526/dark-blur-blurred-gradient.jpg",
+    image: "./quickquiz.jpg",
     technologies: ["AWS", "Tensorflow", "GPT-3", "Firebase", "HTML/TailwindCSS",]
   };
 
@@ -37,7 +37,7 @@ export default function ProjectCard() {
   };
   
 
-  const projects = [card, card2, card3, card4];
+  const projects = [card, card2, card4, card3 ];
 
   return (
     <div className="logos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
@@ -46,9 +46,9 @@ export default function ProjectCard() {
           <img
             src={project.image}
             alt={project.title}
-            className="mt-4 h-48 min-w-72 rounded-t-md object-fill"
+            className="mt-4 h-48 w-full rounded-t-md object-fill"
           />
-          <div className="text-white hover:cursor-pointer h-36 min-w-72 bg-gradient-to-br from-blue-800 to-purple-700 p-4 shadow-lg">
+          <div className="text-white hover:cursor-pointer h-36 bg-gradient-to-br from-blue-800 to-purple-700 p-4 shadow-lg">
             <h2 className="text-xl font-bold mb-2">{project.title}</h2>
             <p className="text-sm mb-4">{project.description}</p>
           </div>

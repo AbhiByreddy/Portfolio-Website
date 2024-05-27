@@ -1,7 +1,9 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
+import {useRouter} from "next/router";
 
 export default function NavBar() {
+    const router = useRouter();
 return (
     <div className="md:ml-6 md:flex vertical-align text-lg mt-10 gap-x-4 font-bold  " style={{opacity: 0.8}}>
 
@@ -17,10 +19,8 @@ return (
             </ScrollLink>
         </button>
 
-        <button className="px-4 gradient">
-            <ScrollLink to="section4" smooth={true} duration={1000} className="cursor-pointer">
+        <button className="px-4 gradient" onClick={() => window.open('./Resume.pdf')}>
                 Resume
-            </ScrollLink>
         </button>
 
         <div className="ml-auto py-3 text-2xl">

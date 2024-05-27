@@ -4,7 +4,7 @@ import Timeline from "./Timeline";
 export default function Experience() {
   return (
     <>
-      <div className="flex px-9 mt-6">
+      <div className="flex px-9 mt-6 ">
         <div className="text-left">
           <div className="">
             <h1
@@ -17,9 +17,9 @@ export default function Experience() {
             >
               Experience
             </h1>
-            
-            
+
             <Timeline/>
+
           </div>
         </div>
         
