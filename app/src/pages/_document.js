@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       
       <Head>
+
       <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"

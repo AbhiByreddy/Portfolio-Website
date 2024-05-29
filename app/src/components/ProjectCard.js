@@ -5,6 +5,7 @@ export default function ProjectCard() {
     title: "Discord Compiler",
     description: "A Discord bot made to compile code snippets in various different languages such as Java, Javascript, Python and GO", 
     link: "https://github.com/AbhiByreddy/Discord-Compiler",
+    devpost: null,
     image: "./compile.png",
     technologies: ["JavaScript", "REST"],
   };
@@ -14,8 +15,9 @@ export default function ProjectCard() {
     description:
       "A program made to automatically process and output images taken from the JWST Space Telescope.",
     link: "https://github.com/AbhiByreddy/WebbProcessor",
+    devpost: null,
     image: "./JWSTicon.png",
-    technologies: ["Java", "Bit Manipulation"],
+    technologies: ["Java", "Bit Manipulation", ],
   };
 
   const card3 = {
@@ -23,6 +25,7 @@ export default function ProjectCard() {
     description:
       "A program made to automatically process and output images taken from the JWST Space Telescope.",
     link: "https://github.com/Laphatize/QuickQuiz",
+    devpost: "https://devpost.com/software/quickquiz",
     image: "./quickquiz.jpg",
     technologies: ["AWS", "Tensorflow", "GPT-3", "Firebase", "HTML/TailwindCSS",]
   };
@@ -32,6 +35,7 @@ export default function ProjectCard() {
     description:
       "Terminal system that allows for professors to write markdown/HTML and have a linux container on the side for students to execute the code.",
     link: "https://github.com/Laphatize/workbook",
+    devpost: "https://devpost.com/software/nimpfy",
     image: "/workbook1.png",
     technologies: ["Google Kubernetes Engine", "React", "HTML/TailwindCSS"]
   };
@@ -40,7 +44,7 @@ export default function ProjectCard() {
   const projects = [card, card2, card4, card3 ];
 
   return (
-    <div className="logos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+    <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6  ">
       {projects && projects.map((project, index) => (
         <div key={index} className="  hover:scale-105 hover:backdrop-blur transition-all duration-300">
           <img
@@ -62,12 +66,21 @@ export default function ProjectCard() {
                 </span>
               ))}
             </div>
-            </div>
-            <button className="rounded-md text-white border border-white hover:opacity-100 opacity-90 transition-all duration-300 py-2 px-4 rounded mt-4  bg-gradient-to-br from-blue-800 to-purple-700">
+            </div>   
+            <div className="flex gap-3 text-md">
+            <button className="rounded-md text-white border border-white hover:opacity-100 opacity-90 transition-all duration-300 py-2 px-2 rounded mt-4 bg-gradient-to-br from-blue-800 to-purple-700">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View on GitHub <i className="pl-2 fab fa-github"></i>
+                GitHub <i className="pl-2 fab fa-github"></i>
               </a>
-            </button>
+            </button>             
+            {project.devpost != null &&  (
+              <button className="rounded-md text-white border border-white hover:opacity-100 opacity-90 transition-all duration-300 py-2 px-2 rounded mt-4  bg-gradient-to-br from-blue-800 to-purple-700">
+                <a href={project.devpost} target="_blank" rel="noopener noreferrer">
+                  Devpost <i className="pl-2 fas fa-link"></i>
+                </a>
+              </button>
+            )}
+            </div> 
           </div>
         </div>
       ))}

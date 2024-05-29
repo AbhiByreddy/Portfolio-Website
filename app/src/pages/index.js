@@ -38,23 +38,31 @@ export default function Home() {
   }, []);
 
   return (
-    <div >
-      <section id="section1" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", marginBottom: "200px"}}>
-        <div className="max-w-4xl mx-auto mb-10 text-white">
+    
+
+    <div className="h-screen">
+      <section id="section1" className="hidden h-screen flex items-center justify-center" style={{ display: "block"}}>
+        <div className="max-w-4xl mx-auto  text-white bottom-0 h-screen flex items-center justify-center">
+          <div>
           <NavBar />
           <Hero />
+            </div>
+       
         </div>
       </section>
 
-      <section id="section2" className="hidden"  style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+
+
+
+      <section id="section2" className="hidden "  style={{ display: "block", justifyContent: "center", alignItems: "center", height: "" }}>
         <div className="max-w-4xl mx-auto mb-10 text-white">
           <ProjectNavBar/>
           <ProjectCard />
         </div>
       </section>
 
-      <section id="section3" className="hidden" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", marginTop: "600px"}}>
-        <div className="max-w-4xl mb-10 mx-auto text-white">
+      <section id="section3" className="hidden py-20 pt-60" style={{ display: "block", justifyContent: "center", alignItems: "center", height: ""}}>
+        <div className="max-w-4xl mb-10 mx-auto text-white w-full">
           <ExperienceNavBar/>
           <Experience/>
         </div>

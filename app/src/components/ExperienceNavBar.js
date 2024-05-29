@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 export default function ExperienceNavBar() {
 return (
-    <div className="md:ml-6 md:flex vertical-align text-lg mt-10 gap-x-4 font-bold  " style={{opacity: 0.8}}>
+    <div className="md:ml-6 md:flex vertical-align text-lg mt-10 gap-x-4 font-bold  w-full " style={{opacity: 0.8}}>
         <button className="px-4 gradient hover:bg-gray">
             <ScrollLink to="section1" smooth={true} duration={1000} className="cursor-pointer">
                 Home
