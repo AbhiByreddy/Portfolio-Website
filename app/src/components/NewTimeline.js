@@ -5,7 +5,7 @@ export default function NewTimeline() {
     const event = {
         title: "CTFGuide",
         job: "Co-Founder & Systems Architect",
-        image: "./darklogo.png",
+        image: "./darkLogo.png",
         date: "Oct 2022 - Present",
         description: "Creates and manages core architectural backend systems on cloud platforms such as AWS, GCP and Kubernetes. Maintains and writes frontend and backend code with JS, Node.js, React, HTML/CSS, etc. Frequently attends B2B, B2C, investor meetings. Manages a team of 7 developers, hosting daily and weekly standups as well as managing product timelines and deadlines.",
     }
