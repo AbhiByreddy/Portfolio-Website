@@ -1,5 +1,6 @@
 import React from "react";
 import Timeline from "./Timeline";
+import NewTimeline from "./NewTimeline.js";
 
 export default function Experience() {
   return (
@@ -22,8 +23,8 @@ export default function Experience() {
 
 
 
-              <div className= "ml-auto">
-            <Timeline/>
+              <div className= "pt-20">
+            <NewTimeline/>
             </div>
 
           </div>

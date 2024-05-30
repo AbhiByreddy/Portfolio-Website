@@ -56,3 +56,101 @@ html {
     transition-delay: 1000ms;
   }
 
+  .timeline{
+    margin: 5em auto;
+    max-width: 34.15em;
+  }
+
+  .checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+  }
+
+  .checkpoint div {
+    border: 2px solid #888;
+    border-radius: 1em;
+    padding: 1.5em;
+  }
+
+  .checkpoint p {
+    line-height: 27px;
+  }
+
+  .checkpoint:nth-child(odd){
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(16.9em);
+  }
+
+  .checkpoint:nth-child(even){
+    border-right: 3px solid #888;
+    padding-right: 3em;
+    transform: translateX(-17em);
+  }
+
+  .checkpoint:nth-child(even)::before,
+  .checkpoint:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3em;
+    height: 3px;
+    background: #888;
+  }
+
+  .checkpoint:nth-child(even)::before {
+  right : 0;
+  }
+
+  .checkpoint:nth-child(odd)::before {
+  left : 0;
+  }
+
+  .checkpoint:nth-child(odd) div::before,
+  .checkpoint:nth-child(even) div::before {
+    content: '';
+    background: linear-gradient(to bottom right, #0044ff, #f40cc2);
+    box-shadow: 0 0 0 0.2em white;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  .checkpoint:nth-child(odd) div::before {
+    left: -0.5em;
+  }
+
+  .checkpoint:nth-child(even) div::before {
+    right: -0.5em;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .timeline {
+      width: 80vw;
+    }
+    .timeline .checkpoint {
+      transform: none;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+    }
+    .timeline .checkpoint::before {
+      width: 3px;
+      height: 4em;
+      top: -2em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline .checkpoint div::before {
+      top: -0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
