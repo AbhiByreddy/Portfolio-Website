@@ -4,7 +4,7 @@
 
 
 html {
-  background-color: black;
+  background-color: #191919;
   transition: opacity 0.5s ease-in-out;
 
 }
@@ -56,9 +56,78 @@ html {
     transition-delay: 1000ms;
   }
 
+  /* Glass card effect for new timeline */
+  .glass-card {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  }
+
+  .glass-card-gradient {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 68, 255, 0.3),
+      0 8px 32px 0 rgba(244, 12, 194, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card-gradient:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 16px 48px 0 rgba(0, 68, 255, 0.4),
+      0 16px 48px 0 rgba(244, 12, 194, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  /* Timeline card hover effects */
+  .timeline-card:hover .logo-container {
+    background: linear-gradient(135deg, rgba(0, 68, 255, 0.2), rgba(244, 12, 194, 0.2)) !important;
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+  }
+
+  .timeline-card:hover .date-badge {
+    background: linear-gradient(135deg, rgba(0, 68, 255, 0.3), rgba(244, 12, 194, 0.3)) !important;
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+  }
+
+  /* Soft glow effect on hover */
+  .timeline-card:hover {
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 68, 255, 0.4),
+      0 8px 32px 0 rgba(244, 12, 194, 0.3),
+      0 0 60px 0 rgba(0, 68, 255, 0.2),
+      0 0 60px 0 rgba(244, 12, 194, 0.15);
+  }
+
+  /* Old timeline styles - keeping for reference */
+  /*
   .timeline{
-    margin: 5em auto;
+    margin: 2em auto 5em;
     max-width: 34.15em;
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #888;
   }
 
   .checkpoint{
@@ -79,34 +148,13 @@ html {
   }
 
   .checkpoint:nth-child(odd){
-    border-left: 3px solid #888;
     padding-left: 3em;
-    transform: translateX(16.9em);
+    transform: translateX(17em);
   }
 
   .checkpoint:nth-child(even){
-    border-right: 3px solid #888;
     padding-right: 3em;
     transform: translateX(-17em);
-  }
-
-  .checkpoint:nth-child(even)::before,
-  .checkpoint:nth-child(odd)::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3em;
-    height: 3px;
-    background: #888;
-  }
-
-  .checkpoint:nth-child(even)::before {
-  right : 0;
-  }
-
-  .checkpoint:nth-child(odd)::before {
-  left : 0;
   }
 
   .checkpoint:nth-child(odd) div::before,
@@ -120,6 +168,7 @@ html {
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
+    z-index: 1;
   }
 
   .checkpoint:nth-child(odd) div::before {
@@ -132,25 +181,51 @@ html {
 
   @media screen and (max-width: 1150px) {
     .timeline {
-      width: 80vw;
+      width: 90vw;
+      max-width: none;
+      margin: 2em auto;
+      padding: 0 1rem;
+    }
+    .timeline::before {
+      left: 1.5em;
     }
     .timeline .checkpoint {
       transform: none;
       width: 100%;
-      padding-left: 0;
+      padding-left: 3em;
       padding-right: 0;
-      border: none;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
     }
-    .timeline .checkpoint::before {
-      width: 3px;
-      height: 4em;
-      top: -2em;
-      left: 50%;
-      transform: translateX(-50%);
+    .timeline .checkpoint div {
+      padding: 1rem;
     }
     .timeline .checkpoint div::before {
-      top: -0.5em;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      left: -0.5em;
+      transform: translateY(-50%);
     }
   }
+
+  @media screen and (max-width: 640px) {
+    .timeline {
+      width: 95vw;
+      padding: 0 0.5rem;
+    }
+    .timeline .checkpoint {
+      padding-left: 2.5em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    .timeline .checkpoint div {
+      padding: 0.75rem;
+    }
+    .timeline .checkpoint h2 {
+      font-size: 1.25rem;
+    }
+    .timeline .checkpoint p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+  */

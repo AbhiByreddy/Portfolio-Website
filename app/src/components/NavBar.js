@@ -1,36 +1,37 @@
 import React from "react";
-import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 import {useRouter} from "next/router";
 
 export default function NavBar() {
     const router = useRouter();
 return (
-    <div className="md:ml-6 md:flex vertical-align text-lg mt-10 gap-x-4 font-bold  " style={{opacity: 0.8}}>
+    <div className="flex flex-col sm:flex-row sm:items-center justify-between text-base sm:text-lg mt-6 sm:mt-10 gap-4 sm:gap-x-4 font-bold" style={{opacity: 0.8}}>
+        <div className="flex flex-wrap px-2 gap-3 sm:gap-x-4 justify-center sm:justify-start">
+            <Link href="/projects">
+                <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300">
+                    Projects
+                </button>
+            </Link>
 
-        <button className="px-4 gradient">
-            <ScrollLink to="section2" smooth={true} duration={1000} className="cursor-pointer">
-                Projects
-            </ScrollLink>
-        </button>
+            <Link href="/experience">
+                <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300">
+                    Experience
+                </button>
+            </Link>
 
-        <button className="px-4 gradient">
-            <ScrollLink to="section3" smooth={true} duration={1000} className="cursor-pointer">
-                Experience
-            </ScrollLink>
-        </button>
+            <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300" onClick={() => window.open('./Resume.pdf')}>
+                    Resume
+            </button>
+        </div>
 
-        <button className="px-4 gradient" onClick={() => window.open('./Resume.pdf')}>
-                Resume
-        </button>
-
-        <div className="ml-auto py-3 text-2xl">
-            <a href="https://github.com/AbhiByreddy" target="_blank" rel="noopener noreferrer" className="px-4 py-2 gradient">
+        <div className="flex gap-2 sm:gap-3 justify-center sm:justify-end sm:ml-auto py-3 text-xl sm:text-2xl">
+            <a href="https://github.com/AbhiByreddy" target="_blank" rel="noopener noreferrer" className="p-2 sm:px-4 sm:py-2 gradient rounded-md transition-all duration-300 hover:scale-110">
                 <i className="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/abhinavbyreddy/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 gradient">
+            <a href="https://www.linkedin.com/in/abhinavbyreddy/" target="_blank" rel="noopener noreferrer" className="p-2 sm:px-4 sm:py-2 gradient rounded-md transition-all duration-300 hover:scale-110">
                 <i className="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:byreddyab@gmail.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 mr-4 gradient">
+            <a href="mailto:byreddyab@gmail.com" target="_blank" rel="noopener noreferrer" className="p-2 sm:px-4 sm:py-2 mr-0 sm:mr-4 gradient rounded-md transition-all duration-300 hover:scale-110">
                 <i className="fa fa-envelope"></i>
             </a>
         </div>

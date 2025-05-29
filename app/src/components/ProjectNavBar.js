@@ -1,25 +1,24 @@
 import React from "react";
-import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 export default function ProjectNavBar() {
 return (
-    <div className="md:ml-6 md:flex vertical-align text-lg mt-10 gap-x-4 font-bold  " style={{opacity: 0.8}}>
-        <button className="px-4 gradient hover:bg-gray">
-            <ScrollLink to="section1" smooth={true} duration={1000} className="cursor-pointer">
+    <div className="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start px-4 sm:px-6 lg:px-0 text-base sm:text-lg mt-6 sm:mt-10 font-bold" style={{opacity: 0.8}}>
+        <Link href="/">
+            <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300 hover:scale-105">
                 Home
-            </ScrollLink>
-        </button>
+            </button>
+        </Link>
 
-        <button className="px-4 gradient">
-            <ScrollLink to="section3" smooth={true} duration={1000} className="cursor-pointer">
+        <Link href="/experience">
+            <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300 hover:scale-105">
                 Experience
-            </ScrollLink>
-        </button>
+            </button>
+        </Link>
 
-        <button className="px-4 gradient" onClick={() => window.open('./Resume.pdf')}>
+        <button className="px-3 sm:px-4 py-2 gradient rounded-md transition-all duration-300 hover:scale-105" onClick={() => window.open('./Resume.pdf')}>
                 Resume
         </button>
-
     </div>
 );
 }

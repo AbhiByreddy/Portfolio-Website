@@ -1,10 +1,9 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import Hero from "../components/Hero";
+import ExperienceNavBar from "../components/ExperienceNavBar";
+import Experience from "../components/Experience";
 import { useEffect, useRef } from 'react';
 
-export default function Home() {
-
+export default function ExperiencePage() {
   const observer = useRef(null);
 
   useEffect(() => {
@@ -32,14 +31,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="hidden min-h-screen flex items-center justify-center" style={{ display: "block"}}>
-        <div className="max-w-6xl mx-auto text-white min-h-screen flex items-center justify-center">
-          <div>
-            <NavBar />
-            <Hero />
-          </div>
+      <section className="hidden py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style={{ display: "block" }}>
+        <div className="w-full max-w-4xl mb-10 mx-auto text-white">
+          <ExperienceNavBar/>
+          <Experience/>
         </div>
       </section>
     </div>
   );
-}
+} 
