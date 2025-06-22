@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceNavBar from "../components/ExperienceNavBar";
+import NavBar from "../components/NavBar";
 import Experience from "../components/Experience";
 import { useEffect, useRef } from 'react';
 
@@ -33,7 +33,7 @@ export default function ExperiencePage() {
     <div className="min-h-screen">
       <section className="hidden py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style={{ display: "block" }}>
         <div className="w-full max-w-4xl mb-10 mx-auto text-white">
-          <ExperienceNavBar/>
+          <NavBar/>
           <Experience/>
         </div>
       </section>
