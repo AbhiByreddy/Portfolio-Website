@@ -17,7 +17,7 @@ export default function Services() {
     client: "Wild Card Creative",
     services: ["Systems Architecture", "Backend Development", "Service Optimization"],
     technologies: ["AWS EKS", "Kubernetes", "Docker"],
-    results: "40% increase in conversion rates",
+    results: "40% increase in cost efficiency",
     status: "ongoing" //"completed", "ongoing", or "pending"
   };
 
@@ -67,7 +67,12 @@ export default function Services() {
             </div>
             
             {/*description*/}
-            <div className="text-center mb-12 px-4">
+            <div className="text-center mb-12 px-4 py-8 rounded-xl" style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
               <p className="text-white/80 text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto mb-6">
                 Want to modernize your app, need help getting started, or don't have any experience and need someone to build your idea for you?
               </p>
@@ -92,7 +97,12 @@ export default function Services() {
             <ConsultingCard consultingProjects={consultingProjects} />
             
             {/* Bottom Section */}
-            <div className="text-center mt-16 px-4">
+            <div className="text-center mt-16 px-4 py-8 rounded-xl" style={{
+              background: 'rgba(255, 255, 255, 0.08)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.15)'
+            }}>
               <p className="text-white/80 text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto mb-8">
                 Ready to transform your business with cutting-edge technology solutions? 
                 Let's discuss how I can help you efficient systems that deliver results.
