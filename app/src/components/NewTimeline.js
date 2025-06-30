@@ -30,8 +30,16 @@ export default function NewTimeline() {
         description: "Incoming TPM at Comcast",
         website: "https://comcast.com"
     }
+    const event5 = {
+        title: "Amazon (AWS)",
+        job: "Software Development Engineer Intern",
+        image: "./aws-logo-scaled.jpg",
+        date: "Fall 2025",
+        description: "Incoming SDE at AWS",
+        website: "https://aws.amazon.com"
+    }
 
-    const events = [event, event4, event2, event3];
+    const events = [event, event5, event4, event2, event3];
     
     return (
         <div className="w-full max-w-4xl mx-auto px-4 space-y-6">
