@@ -71,7 +71,7 @@ function Hero() {
                 rel="noopener noreferrer"
                 className="font-bold relative inline-block"
                 style={{
-                  backgroundImage: "linear-gradient(to bottom right, #0088D2, #00B345, #CB1F47)",
+                  backgroundImage: "linear-gradient(to bottom right, #0088D2, #00B345)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
