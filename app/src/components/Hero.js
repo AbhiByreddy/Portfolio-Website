@@ -60,7 +60,7 @@ function Hero() {
                 <span 
                   className="absolute bottom-[1px] left-0 w-full h-[2px]"
                   style={{
-                    backgroundImage: "linear-gradient(to bottom right, #FFD700, #FFA500)",
+                    backgroundImage: "linear-gradient(to bottom right, #FF9900, #252F3E)",
                   }}
                 ></span>
               </a>
@@ -80,7 +80,7 @@ function Hero() {
                 <span 
                   className="absolute bottom-[1px] left-0 w-full h-[2px]"
                   style={{
-                    backgroundImage: "linear-gradient(to bottom right, #FFD700, #FF6B6B, #4ECDC4)",
+                    backgroundImage: "linear-gradient(to bottom right, #0088D2, #00B345)",
                   }}
                 ></span>
               </a>
