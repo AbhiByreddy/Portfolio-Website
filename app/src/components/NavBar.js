@@ -24,15 +24,16 @@ return (
                     Home
                 </button>
             </Link>
-            <Link href="/projects">
-                <button className={getButtonClass("/projects")}>
-                    Projects
-                </button>
-            </Link>
 
             <Link href="/experience">
                 <button className={getButtonClass("/experience")}>
                     Experience
+                </button>
+            </Link>
+
+            <Link href="/projects">
+                <button className={getButtonClass("/projects")}>
+                    Projects
                 </button>
             </Link>
 

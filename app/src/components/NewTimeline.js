@@ -28,7 +28,7 @@ export default function NewTimeline() {
         image: "./CMCSA.png",
         date: "Summer 2025",
         description: "Incoming TPM at Comcast",
-        website: "https://comcast.com"
+        website: "https://corporate.comcast.com/"
     }
     const event5 = {
         title: "Amazon (AWS)",
