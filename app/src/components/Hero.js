@@ -66,7 +66,7 @@ function Hero() {
               </a>
               {' '}| Technical Project Manager Intern @{' '}
               <a 
-                href="https://comcast.com" 
+                href="https://corporate.comcast.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-bold relative inline-block"
