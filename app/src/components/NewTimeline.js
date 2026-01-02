@@ -6,7 +6,7 @@ export default function NewTimeline() {
         job: "Co-Founder & Systems Architect",
         image: "./darkLogo.png",
         date: "Oct 2022 - Present",
-        description: "Creates and manages core architectural backend systems on cloud platforms such as AWS, GCP and Kubernetes. Maintains and writes frontend and backend code with JS, Node.js, React, HTML/CSS, etc. Frequently attends B2B, B2C, investor meetings. Manages a team of 7 developers, hosting daily and weekly standups as well as managing product timelines and deadlines.",
+        description: "Co-Founded CTFGuide, an AI cybersecurity learning platform that supported thousands of students. Created and managed core architectural backend systems on AWS and GCP. Wrote frontend code using React/Next & TailwindCSS. Wrote backend code with JS, Node.js. Frequently attended B2B investor meetings and maintained customer relations. Managed a team of 7 core developers, hosting daily and weekly standups as well as managing product timelines and deadlines.",
         website: "https://ctfguide.com"
     }
     const event2 = {
@@ -27,7 +27,7 @@ export default function NewTimeline() {
         job: "Technical Project Manager Intern",
         image: "./CMCSA.png",
         date: "Summer 2025",
-        description: "Incoming TPM at Comcast",
+        description: "Managed thousands of nationwide deployments across Comcasts vCMTS infrastructure.",
         website: "https://corporate.comcast.com/"
     }
     const event5 = {
@@ -35,7 +35,7 @@ export default function NewTimeline() {
         job: "Software Development Engineer Intern",
         image: "./aws-logo-scaled.jpg",
         date: "Fall 2025",
-        description: "Incoming SDE at AWS",
+        description: "Optimized EC2 and EBS instance availability for all FSx engines. Launched 3 FSxZ deployment types in 20+ regions.",
         website: "https://aws.amazon.com"
     }
 

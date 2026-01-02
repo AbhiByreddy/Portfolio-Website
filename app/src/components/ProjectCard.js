@@ -23,7 +23,7 @@ export default function ProjectCard() {
   const card3 = {
     title: "QuickQuiz",
     description:
-      "A program made to process user submitted notes and generate flashcards for studying.",
+      "An application made to process user submitted notes and generate flashcards for studying.",
     link: "https://github.com/Laphatize/QuickQuiz",
     devpost: "https://devpost.com/software/quickquiz",
     image: "./quickquiz.jpg",
